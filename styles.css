@@ -1,0 +1,242 @@
+/* Lendr Website Styles */
+:root {
+    --bg-color: #F7F4EE; /* Clean cream background */
+    --forest-green: #243525; /* Primary wordmark green */
+    --accent-green: #2D5A27; /* Accent green */
+    --ink: #1C1C1C; /* Main text color */
+    --border-wood: #E6DFD3; /* Subtle wood border */
+    --card-bg: #FFFFFF;
+    --max-width: 900px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 0;
+}
+
+h1, h2, h3, .brand-font {
+    font-family: "Lora", "Georgia", serif;
+    color: var(--forest-green);
+    font-weight: 600;
+}
+
+a {
+    color: var(--accent-green);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Layout */
+header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-wood);
+    padding: 1.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link img {
+    height: 32px;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--forest-green);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+footer {
+    border-top: 1px solid var(--border-wood);
+    padding: 4rem 1.5rem 2rem;
+    margin-top: 5rem;
+    background-color: #F0EDE6;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 24px;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* Sections & Components */
+.hero {
+    text-align: center;
+    padding: 2rem 0 4rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #444;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--forest-green);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-green);
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-wood);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+}
+
+.content-page {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-wood);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.content-page h1 {
+    margin-bottom: 2rem;
+}
+
+.content-page section {
+    margin-bottom: 2.5rem;
+}
+
+.content-page h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-wood);
+    padding-bottom: 0.5rem;
+}
+
+.content-page p, .content-page li {
+    margin-bottom: 1rem;
+}
+
+.content-page ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.deletion-box {
+    background-color: #FFF9F2;
+    border: 1px solid #FFE6C7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.deletion-box h3 {
+    color: #A34A2F;
+    margin-bottom: 0.8rem;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--forest-green);
+    color: white !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .content-page {
+        padding: 1.5rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+}
